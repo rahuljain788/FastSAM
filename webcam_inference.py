@@ -30,6 +30,16 @@ while cap.isOpened():
             conf=0.4,
             iou=0.9,
         )
+
+        # print(everything_results[0].masks.shape)
+        # print(everything_results[0].boxes.shape)
+        # print(everything_results[0].boxes[0].xyxy.cpu().numpy())
+
+        # for box in everything_results[0].boxes:
+        #     box = box.xyxy.cpu().numpy()[0]
+        #     print(box)
+        #     cv2.rectangle(frame, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (0, 255, 0), 2)
+
         prompt_process = FastSAMPrompt(frame, everything_results, device=DEVICE)
 
         # # everything prompt
