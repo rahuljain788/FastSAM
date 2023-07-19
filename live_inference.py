@@ -5,7 +5,7 @@ import cv2
 import time
 
 model = FastSAM('FastSAM-x.pt')
-# IMAGE_PATH = 'FastSAM/examples/dogs.jpg'
+IMAGE_PATH = 'FastSAM/examples/dogs.jpg'
 
 DEVICE = torch.device(
     "cuda"
